@@ -6,8 +6,9 @@ import schedule
 
 
 def main():
-
+    # 緯度,経度,タイムゾーン,時間ごとの気温を取得
     data = get_weather(35.6823, 179.6823, timezone="Asia/Tokyo", hourly=True)
+
     filepath = time.strftime("%Y%m%d%H%M%S") + ".json"
     export_json(data, filepath)
 
