@@ -16,6 +16,7 @@ def main():
 if __name__ == '__main__':
     # 毎時55分に実行
     while True:
-        schedule.run_pending()
-        time.sleep(1)
+        print("実行中")
         schedule.every().hour.at(":55").do(main)
+        schedule.run_pending()
+        time.sleep(60)
